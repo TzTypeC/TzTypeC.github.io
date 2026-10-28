@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="doc.bascom.title">BASCOM | Muhamad Tabriz Al Faraby</title>
+  <meta name="description" content="Backend for a school alumni network, with identity verification" data-i18n-attr="content|projects.bascom.tagline">
+  <link rel="canonical" href="https://tztypec.github.io/projects/bascom.html">
+  <meta name="theme-color" content="#0d1821">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Muhamad Tabriz Al Faraby">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Muhamad Tabriz Al Faraby">
+  <meta property="og:title" content="BASCOM | Muhamad Tabriz Al Faraby">
+  <meta property="og:description" content="Backend for a school alumni network, with identity verification">
+  <meta property="og:url" content="https://tztypec.github.io/projects/bascom.html">
+  <meta property="og:image" content="https://tztypec.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio of Muhamad Tabriz Al Faraby">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BASCOM | Muhamad Tabriz Al Faraby">
+  <meta name="twitter:description" content="Backend for a school alumni network, with identity verification">
+  <meta name="twitter:image" content="https://tztypec.github.io/assets/img/og.png">
+  <meta name="twitter:image:alt" content="Portfolio of Muhamad Tabriz Al Faraby">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" data-i18n="ui.skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <span class="brand-mark" aria-hidden="true">T</span>
+      <span class="brand-name"><span class="brand-name-full">Muhamad Tabriz Al Faraby</span><span class="brand-name-short">Tabriz</span></span>
+    </a>
+    <nav class="nav" aria-label="Main" data-i18n-attr="aria-label|ui.navLabel">
+      <ul>
+        <li><a data-i18n="nav.0" href="../#about">About</a></li>
+        <li><a data-i18n="nav.1" href="../#projects">Projects</a></li>
+        <li><a data-i18n="nav.2" href="../#teaching">Teaching</a></li>
+        <li><a data-i18n="nav.3" href="../#events">Events</a></li>
+        <li><a data-i18n="nav.4" href="../#creative">Creative</a></li>
+        <li><a data-i18n="nav.5" href="../#skills">Skills</a></li>
+        <li><a data-i18n="nav.6" href="../#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label|ui.lang">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-lang="id" aria-pressed="false" lang="id">ID</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <nav class="crumb" aria-label="Breadcrumb" data-i18n-attr="aria-label|ui.crumb">
+    <ol>
+      <li><a data-i18n="ui.home" href="../">Home</a></li>
+      <li><a data-i18n="projects_title" href="../#projects">Selected projects</a></li>
+      <li><span aria-current="page">BASCOM</span></li>
+    </ol>
+  </nav>
+  <header class="cs-head">
+    <span class="status status-prototype" data-i18n="projects.bascom.status">Prototype</span>
+    <h1>BASCOM</h1>
+    <p class="cs-tagline" data-i18n="projects.bascom.tagline">Backend for a school alumni network, with identity verification</p>
+  </header>
+  <div class="cs-body">
+    <div class="cs-main">
+      <section aria-labelledby="context-title">
+        <h2 data-i18n="labels.context" id="context-title">Context</h2>
+        <p data-i18n="projects.bascom.context">A community platform for alumni of Bastyasaka (SMAN 3 Jombang). Alumni register, get verified as real graduates, and reconnect. I owned the whole server side while my teammate built the client.</p>
+      </section>
+      <section aria-labelledby="built-title">
+        <h2 data-i18n="labels.built" id="built-title">What I built</h2>
+        <ul class="ticks">
+          <li data-i18n="projects.bascom.built.0">REST API on Express.js 5 with an 11-model Prisma schema on PostgreSQL.</li>
+          <li data-i18n="projects.bascom.built.1">Authentication with JWT access tokens and refresh-token rotation, including detection of reused (already rotated) refresh tokens.</li>
+          <li data-i18n="projects.bascom.built.2">Alumni identity verification: student ID (NIS) lookup combined with Jaro-Winkler fuzzy matching on names, so small spelling differences still verify.</li>
+          <li data-i18n="projects.bascom.built.3">Redis cache for the onboarding flow.</li>
+          <li data-i18n="projects.bascom.built.4">As PM: split tasks between backend and frontend and set up the Git branching workflow.</li>
+        </ul>
+      </section>
+      <aside class="scope-note" aria-labelledby="scope-title">
+        <h2 data-i18n="labels.honesty" id="scope-title">Scope note</h2>
+        <p data-i18n="projects.bascom.honesty">Stopped at prototype stage; never released to production.</p>
+      </aside>
+      <section aria-labelledby="sketch-title">
+        <h2 data-i18n="ui.sketch" id="sketch-title">How the pieces connect</h2>
+        <div class="sheet">
+          <div class="sheet-head"><code>bascom / server</code></div>
+          <ol class="spec">
+            <li><span class="key" data-i18n="diagram.bascom.client.k">Client</span><span class="val" data-i18n="diagram.bascom.client.v">Built by my teammate</span></li>
+            <li><code class="key">Express.js 5</code><span class="val" data-i18n="diagram.bascom.api">REST API, owned end to end by me</span></li>
+            <li><code class="key">JWT</code><span class="val" data-i18n="diagram.bascom.jwt">Access tokens with refresh-token rotation and reuse detection</span></li>
+            <li><code class="key">NIS + Jaro-Winkler</code><span class="val" data-i18n="diagram.bascom.verify">Alumni identity verification with fuzzy name matching</span></li>
+            <li><code class="key">Redis</code><span class="val" data-i18n="diagram.bascom.redis">Cache for the onboarding flow</span></li>
+            <li><code class="key">Prisma + PostgreSQL</code><span class="val" data-i18n="diagram.bascom.db">11-model schema</span></li>
+          </ol>
+          <p class="sheet-foot" data-i18n="ui.sketchNote">Summarised from the project description on this page; not a complete architecture.</p>
+        </div>
+      </section>
+    </div>
+    <aside class="cs-aside">
+      <dl class="cs-meta">
+        <div><dt data-i18n="labels.role">Role</dt><dd data-i18n="projects.bascom.role">Project Manager &amp; sole backend developer (team of 2)</dd></div>
+        <div><dt data-i18n="labels.period">Period</dt><dd data-i18n="projects.bascom.period">Jun 2025 – Feb 2026</dd></div>
+        <div><dt data-i18n="labels.stack">Stack</dt><dd><ul class="stack"><li>Node.js</li><li>Express.js 5</li><li>PostgreSQL</li><li>Prisma ORM</li><li>Redis</li><li>JWT</li></ul></dd></div>
+      </dl>
+      <a class="btn btn-primary" href="https://github.com/TzTypeC/BASCOM"><span><span data-i18n="labels.repo">Source code</span><small>github.com/<wbr>TzTypeC/<wbr>BASCOM</small></span></a>
+    </aside>
+  </div>
+  <nav class="pager" aria-label="Selected projects" data-i18n-attr="aria-label|projects_title">
+    <a class="next" href="bbo-token.html"><small data-i18n="ui.next">Next project</small><strong>BBO Token System</strong></a>
+  </nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p data-i18n="footer">Designed and built with AI assistance using plain HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+    <p data-i18n="ui.rights">© 2026 Muhamad Tabriz Al Faraby</p>
+  </div>
+</footer>
+</body>
+</html>

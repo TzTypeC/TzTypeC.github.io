@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="doc.terraquest.title">TerraQuest | Muhamad Tabriz Al Faraby</title>
+  <meta name="description" content="Gamified community app for sharing before-and-after eco actions" data-i18n-attr="content|projects.terraquest.tagline">
+  <link rel="canonical" href="https://tztypec.github.io/projects/terraquest.html">
+  <meta name="theme-color" content="#0d1821">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Muhamad Tabriz Al Faraby">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Muhamad Tabriz Al Faraby">
+  <meta property="og:title" content="TerraQuest | Muhamad Tabriz Al Faraby">
+  <meta property="og:description" content="Gamified community app for sharing before-and-after eco actions">
+  <meta property="og:url" content="https://tztypec.github.io/projects/terraquest.html">
+  <meta property="og:image" content="https://tztypec.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio of Muhamad Tabriz Al Faraby">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TerraQuest | Muhamad Tabriz Al Faraby">
+  <meta name="twitter:description" content="Gamified community app for sharing before-and-after eco actions">
+  <meta name="twitter:image" content="https://tztypec.github.io/assets/img/og.png">
+  <meta name="twitter:image:alt" content="Portfolio of Muhamad Tabriz Al Faraby">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" data-i18n="ui.skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <span class="brand-mark" aria-hidden="true">T</span>
+      <span class="brand-name"><span class="brand-name-full">Muhamad Tabriz Al Faraby</span><span class="brand-name-short">Tabriz</span></span>
+    </a>
+    <nav class="nav" aria-label="Main" data-i18n-attr="aria-label|ui.navLabel">
+      <ul>
+        <li><a data-i18n="nav.0" href="../#about">About</a></li>
+        <li><a data-i18n="nav.1" href="../#projects">Projects</a></li>
+        <li><a data-i18n="nav.2" href="../#teaching">Teaching</a></li>
+        <li><a data-i18n="nav.3" href="../#events">Events</a></li>
+        <li><a data-i18n="nav.4" href="../#creative">Creative</a></li>
+        <li><a data-i18n="nav.5" href="../#skills">Skills</a></li>
+        <li><a data-i18n="nav.6" href="../#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label|ui.lang">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-lang="id" aria-pressed="false" lang="id">ID</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <nav class="crumb" aria-label="Breadcrumb" data-i18n-attr="aria-label|ui.crumb">
+    <ol>
+      <li><a data-i18n="ui.home" href="../">Home</a></li>
+      <li><a data-i18n="projects_title" href="../#projects">Selected projects</a></li>
+      <li><span aria-current="page">TerraQuest</span></li>
+    </ol>
+  </nav>
+  <header class="cs-head">
+    <span class="status status-prototype" data-i18n="projects.terraquest.status">Prototype</span>
+    <h1>TerraQuest</h1>
+    <p class="cs-tagline" data-i18n="projects.terraquest.tagline">Gamified community app for sharing before-and-after eco actions</p>
+  </header>
+  <div class="cs-body">
+    <div class="cs-main">
+      <section aria-labelledby="context-title">
+        <h2 data-i18n="labels.context" id="context-title">Context</h2>
+        <p data-i18n="projects.terraquest.context">A high school team project built in a 9-day sprint: students post an environmental action with before-and-after photos, and the community validates it by voting. My teammate built the UI; I built the Firebase side and the app logic.</p>
+      </section>
+      <section aria-labelledby="built-title">
+        <h2 data-i18n="labels.built" id="built-title">What I built</h2>
+        <ul class="ticks">
+          <li data-i18n="projects.terraquest.built.0">Email and password authentication with registration, password-strength checks, and password reset (Firebase Auth).</li>
+          <li data-i18n="projects.terraquest.built.1">Posting flow with two photos per post, compressed in the browser before upload to Firebase Storage.</li>
+          <li data-i18n="projects.terraquest.built.2">Community feed from Firestore with infinite scroll and mutually exclusive upvote/downvote.</li>
+        </ul>
+      </section>
+      <aside class="scope-note" aria-labelledby="scope-title">
+        <h2 data-i18n="labels.honesty" id="scope-title">Scope note</h2>
+        <p data-i18n="projects.terraquest.honesty">Working prototype; the quest, guide, and guild features were planned but not implemented.</p>
+      </aside>
+      <section aria-labelledby="sketch-title">
+        <h2 data-i18n="ui.sketch" id="sketch-title">How the pieces connect</h2>
+        <div class="sheet">
+          <div class="sheet-head"><code>terraquest / app</code></div>
+          <ol class="spec">
+            <li><code class="key">Firebase Auth</code><span class="val" data-i18n="diagram.terraquest.auth">Registration, password-strength check, password reset</span></li>
+            <li><code class="key">Compressor.js</code><span class="val" data-i18n="diagram.terraquest.compress">Two photos per post, compressed in the browser before upload</span></li>
+            <li><code class="key">Firebase Storage</code><span class="val" data-i18n="diagram.terraquest.storage">Receives the compressed before-and-after photos</span></li>
+            <li><code class="key">Cloud Firestore</code><span class="val" data-i18n="diagram.terraquest.feed">Community feed, infinite scroll, mutually exclusive upvote/downvote</span></li>
+            <li class="planned"><span class="key" data-i18n="diagram.terraquest.planned.k">Planned</span><span class="val" data-i18n="diagram.terraquest.planned.v">Quest, guide, and guild features (not implemented)</span></li>
+          </ol>
+          <p class="sheet-foot" data-i18n="ui.sketchNote">Summarised from the project description on this page; not a complete architecture.</p>
+        </div>
+      </section>
+    </div>
+    <aside class="cs-aside">
+      <dl class="cs-meta">
+        <div><dt data-i18n="labels.role">Role</dt><dd data-i18n="projects.terraquest.role">Firebase and app-logic developer (team of 2, ~70% of commits)</dd></div>
+        <div><dt data-i18n="labels.period">Period</dt><dd data-i18n="projects.terraquest.period">Oct 2024 (9-day sprint)</dd></div>
+        <div><dt data-i18n="labels.stack">Stack</dt><dd><ul class="stack"><li>JavaScript (ES modules)</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>Firebase Storage</li><li>Tailwind CSS</li><li>Compressor.js</li></ul></dd></div>
+      </dl>
+      <a class="btn btn-primary" href="https://github.com/TzTypeC/TerraQuest/tree/Test_Environment"><span><span data-i18n="labels.repo">Source code</span><small>github.com/<wbr>TzTypeC/<wbr>TerraQuest/<wbr>tree/<wbr>Test_Environment</small></span></a>
+    </aside>
+  </div>
+  <nav class="pager" aria-label="Selected projects" data-i18n-attr="aria-label|projects_title">
+    <a class="prev" href="pmcc-overlay.html"><small data-i18n="ui.prev">Previous project</small><strong>PMCC PENS 2026 Broadcast Overlay</strong></a>
+  </nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p data-i18n="footer">Designed and built with AI assistance using plain HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+    <p data-i18n="ui.rights">© 2026 Muhamad Tabriz Al Faraby</p>
+  </div>
+</footer>
+</body>
+</html>
