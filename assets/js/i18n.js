@@ -128,16 +128,16 @@ window.I18N = {
     "Des 2025 – Jan 2026"
   ],
   "projects.glassco10-overlay.honesty": [
-    "The scoreboard and draft pick are controlled manually by an operator; only the post-game screen is automated through the API. About three quarters of the code is hand-written, the rest AI-assisted.",
-    "Skor dan draft pick dikendalikan manual oleh operator; hanya layar pasca-pertandingan yang otomatis lewat API. Sekitar tiga perempat kode ditulis sendiri, sisanya dibantu AI."
+    "The public repository is an early prototype: the scoreboard and draft-pick overlays are unfinished stubs, the post-game screen runs on sample data, and the form's save endpoint is not wired up yet. About three quarters of the code is hand-written, the rest AI-assisted.",
+    "Repositori publik ini masih prototipe awal: overlay skor dan draft pick belum selesai, layar pasca-pertandingan masih memakai data contoh, dan endpoint penyimpan form belum tersambung. Sekitar tiga perempat kode ditulis sendiri, sisanya dibantu AI."
   ],
   "projects.glassco10-overlay.tagline": [
-    "Real-time Videotron overlay for a live Mobile Legends tournament",
-    "Overlay Videotron real-time untuk turnamen Mobile Legends live"
+    "WebSocket overlay prototype for a live Mobile Legends tournament",
+    "Prototipe overlay WebSocket untuk turnamen Mobile Legends live"
   ],
   "projects.glassco10-overlay.status": [
-    "Used live",
-    "Dipakai live"
+    "Prototype",
+    "Prototipe"
   ],
   "projects.pmcc-overlay.role": [
     "System integrator and broadcaster (OBS operator)",
@@ -660,20 +660,20 @@ window.I18N = {
     "Glassco10 Tournament Overlay | Muhamad Tabriz Al Faraby"
   ],
   "projects.glassco10-overlay.built.0": [
-    "An operator control panel in the browser that pushes the in-game scoreboard and draft-pick state to the Videotron display over WebSocket.",
-    "Panel kontrol operator di browser yang mengirim status skor in-game dan draft pick ke layar Videotron lewat WebSocket."
+    "A Bun + Elysia server with a WebSocket endpoint that keeps per-match channels in memory and broadcasts updates to every overlay page subscribed to that match.",
+    "Server Bun + Elysia dengan endpoint WebSocket yang menyimpan kanal per pertandingan di memori dan menyiarkan update ke setiap halaman overlay yang berlangganan pertandingan tersebut."
   ],
   "projects.glassco10-overlay.built.1": [
-    "A post-game screen that pulls match data from the Moonton Public API and renders KDA, gold, duration, and item builds automatically.",
-    "Layar pasca-pertandingan yang mengambil data dari Moonton Public API dan menampilkan KDA, gold, durasi, dan item build secara otomatis."
+    "An animated post-game statistics screen showing KDA, gold, duration, and item builds for both teams, using hero and item data sets.",
+    "Layar statistik pasca-pertandingan beranimasi yang menampilkan KDA, gold, durasi, dan item build kedua tim, memakai data set hero dan item."
   ],
   "projects.glassco10-overlay.built.2": [
-    "Hero and item data sets plus animated post-game layouts.",
-    "Data set hero dan item serta layout pasca-pertandingan beranimasi."
+    "An operator form for match details (match name, game number, teams, match type).",
+    "Form operator untuk detail pertandingan (nama pertandingan, nomor game, tim, tipe match)."
   ],
   "projects.glassco10-overlay.context": [
-    "Glassco10 is the inter-class tournament at SMAN 3 Jombang. I ran the esports division as an alumni committee member and needed the main-stage Videotron to show scores, drafts, and post-game stats without a broadcast team.",
-    "Glassco10 adalah turnamen antarkelas di SMAN 3 Jombang. Saya memimpin divisi esports sebagai panitia alumni dan butuh Videotron panggung utama yang bisa menampilkan skor, draft, dan statistik pasca-pertandingan tanpa tim broadcast."
+    "Glassco10 is the inter-class tournament at SMAN 3 Jombang. I ran the esports division as an alumni committee member and started building overlays so the main-stage Videotron could show match information and post-game statistics.",
+    "Glassco10 adalah turnamen antarkelas di SMAN 3 Jombang. Saya memimpin divisi esports sebagai panitia alumni dan mulai membangun overlay agar Videotron panggung utama bisa menampilkan informasi pertandingan dan statistik pasca-pertandingan."
   ],
   "labels.lesson": [
     "What I learned",
@@ -683,25 +683,37 @@ window.I18N = {
     "All overlay work ended up on me because no one else on the committee could write basic HTML, CSS, or JavaScript yet. Next time I would train the team before the event so the work can be shared.",
     "Seluruh pengerjaan overlay akhirnya bertumpu pada saya karena belum ada panitia lain yang bisa HTML, CSS, atau JavaScript dasar. Ke depannya saya akan melatih tim sebelum acara supaya pekerjaannya bisa dibagi."
   ],
-  "diagram.glassco10-overlay.m1": [
-    "Operator control panel (browser)",
-    "Panel kontrol operator (browser)"
+  "diagram.glassco10-overlay.server": [
+    "Server with a WebSocket endpoint",
+    "Server dengan endpoint WebSocket"
   ],
-  "diagram.glassco10-overlay.m3": [
-    "Videotron: scoreboard and draft pick",
-    "Videotron: skor dan draft pick"
+  "diagram.glassco10-overlay.ws": [
+    "Per-match channels kept in memory; updates are broadcast to every overlay page subscribed to that match",
+    "Kanal per pertandingan disimpan di memori; update disiarkan ke setiap halaman overlay yang berlangganan pertandingan tersebut"
   ],
-  "diagram.glassco10-overlay.a2": [
-    "Post-game screen: KDA, gold, duration, item builds",
-    "Layar pasca-pertandingan: KDA, gold, durasi, item build"
+  "diagram.glassco10-overlay.post.k": [
+    "Post-game screen",
+    "Layar pasca-pertandingan"
   ],
-  "diagram.glassco10-overlay.manual": [
-    "Manual, driven by an operator",
-    "Manual, dikendalikan operator"
+  "diagram.glassco10-overlay.post.v": [
+    "KDA, gold, duration, and item builds for both teams; runs on sample data",
+    "KDA, gold, durasi, dan item build kedua tim; memakai data contoh"
   ],
-  "diagram.glassco10-overlay.auto": [
-    "Automated through the API",
-    "Otomatis lewat API"
+  "diagram.glassco10-overlay.form.k": [
+    "Operator form",
+    "Form operator"
+  ],
+  "diagram.glassco10-overlay.form.v": [
+    "Match details; the save endpoint is not wired up yet",
+    "Detail pertandingan; endpoint penyimpan belum tersambung"
+  ],
+  "diagram.glassco10-overlay.stub.k": [
+    "Unfinished",
+    "Belum selesai"
+  ],
+  "diagram.glassco10-overlay.stub.v": [
+    "Scoreboard and draft-pick overlays (stubs)",
+    "Overlay skor dan draft pick (stub)"
   ],
   "ui.screens": [
     "Screenshots",
@@ -712,8 +724,8 @@ window.I18N = {
     "Form PostMatch Controller di browser, diisi nilai contoh: BO3, match 3, game 2, Blue Team melawan Red Team, playoff"
   ],
   "shot.glassco.controller.title": [
-    "Post-match controller page",
-    "Halaman controller pasca-pertandingan"
+    "Operator form for match details",
+    "Form operator untuk detail pertandingan"
   ],
   "ui.capGlassco": [
     "Local run with sample data",
